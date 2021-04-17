@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        images = new ArrayList<>(Arrays.asList(storageDir.listFiles()));
+        images.clear();
+        images.addAll(Arrays.asList(storageDir.listFiles()));
         imageAdapter.notifyDataSetChanged();
     }
 
